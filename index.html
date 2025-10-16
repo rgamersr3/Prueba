@@ -14,26 +14,20 @@
       overflow-x: hidden;
     }
 
-    /* Banner superior */
+    /* Banner visual sin texto */
     .banner {
       background: url('banner.jpg') center/cover no-repeat;
       height: 200px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 2px 2px 8px black;
-      font-size: 24px;
-      font-weight: bold;
-      text-align: center;
+      width: 100%;
       position: relative;
       z-index: 2;
+      box-shadow: 0 0 25px rgba(0, 255, 0, 0.3);
     }
 
     /* Encabezado principal */
     .top-header {
       text-align: center;
-      padding: 40px 0;
+      padding: 40px 0 0 0;
       background: linear-gradient(180deg, rgba(0,255,0,0.1), transparent);
     }
 
@@ -47,6 +41,7 @@
       font-size: 20px;
       color: #ccc;
       margin-top: 10px;
+      margin-bottom: 40px;
     }
 
     /* Menú de navegación */
@@ -170,16 +165,14 @@
 </head>
 <body>
 
-  <!-- Banner superior -->
-  <div class="banner">
-    <h2>🎮 Bienvenido a R-GAMER'S - ¡Tu centro gamer favorito! 🎮</h2>
-  </div>
-
   <!-- Título principal -->
   <div class="top-header">
     <h1>R-GAMER'S</h1>
     <p>Tu mundo gamer en un solo lugar 🎮</p>
   </div>
+
+  <!-- Banner visual debajo del título -->
+  <div class="banner"></div>
 
   <!-- Menú -->
   <nav>
@@ -294,4 +287,4 @@
   </script>
 
 </body>
-  </html>
+</html>

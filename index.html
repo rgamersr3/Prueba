@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>R-GAMER'S</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0c0c0c;
+      color: white;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    /* Banner superior */
+    .banner {
+      background: url('banner.jpg') center/cover no-repeat;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 8px black;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Encabezado principal */
+    .top-header {
+      text-align: center;
+      padding: 40px 0;
+      background: linear-gradient(180deg, rgba(0,255,0,0.1), transparent);
+    }
+
+    .top-header h1 {
+      font-size: 50px;
+      color: #00ff00;
+      margin: 0;
+    }
+
+    .top-header p {
+      font-size: 20px;
+      color: #ccc;
+      margin-top: 10px;
+    }
+
+    /* Menú de navegación */
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #111;
+      padding: 15px 0;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    nav a {
+      color: #00ff00;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: rgba(0,255,0,0.2);
+    }
+
+    /* Secciones */
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #00ff00;
+      margin-bottom: 20px;
+    }
+
+    .two-columns {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 45%;
+      box-shadow: 0 0 15px rgba(0,255,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .card h3 {
+      color: #00ff00;
+      font-size: 20px;
+      margin: 15px 10px 10px;
+    }
+
+    .card p {
+      color: #ccc;
+      font-size: 16px;
+      margin: 0 10px 20px;
+    }
+
+    /* Efectos de aparición */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Pie de página */
+    footer {
+      text-align: center;
+      position: relative;
+      margin-top: 40px;
+      background: #0c0c0c;
+      padding: 20px 0;
+    }
+
+    .footer-glow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 150px;
+      background: radial-gradient(ellipse at bottom, rgba(0,255,0,0.4), transparent 70%);
+      z-index: 1;
+    }
+
+    footer p {
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (max-width: 650px) {
+      .two-columns {
+        flex-direction: column;
+        align-items: center;
+      }
+      .card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Banner superior -->
+  <div class="banner">
+    <h2>🎮 Bienvenido a R-GAMER'S - ¡Tu centro gamer favorito! 🎮</h2>
+  </div>
+
+  <!-- Título principal -->
+  <div class="top-header">
+    <h1>R-GAMER'S</h1>
+    <p>Tu mundo gamer en un solo lugar 🎮</p>
+  </div>
+
+  <!-- Menú -->
+  <nav>
+    <a href="#novedades">Novedades</a>
+    <a href="#estrenos">Estrenos</a>
+    <a href="#recomendaciones">Recomendaciones</a> 
+    <a href="#topten">Top Ten</a> 
+    <a href="catalogo.html">Catálogo</a>                                         
+    <a href="servicios.html">Servicios</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <!-- Novedades -->
+  <section id="novedades" class="fade-in">
+    <h2>🔥 Novedades</h2>
+    <div class="two-columns">
+      <div class="card">
+        <img src="noticia1.jpg" alt="Noticia 1">
+        <h3>"GTA 6 ha perdido a una figura clave para su desarrollo, pero es una buena noticia"</h3>
+        <p>Dan Houser no ha participado en el guion ni el desarrollo de personajes de Grand Theft Auto 6 y, aunque le echaremos de menos, es un cambio positivo.</p>
+      </div>
+      <div class="card">
+        <img src="noticia2.jpg" alt="Noticia 2">
+        <h3>Call of Duty®: Black Ops 7 ha sido confirmado.</h3>
+        <p>Call of Duty: Black Ops 7 está programado para su lanzamiento en Xbox Series X|S, Xbox One, PlayStation® 5, PlayStation® 4 y en PC a través de Xbox PC, Battle.net y Steam. Además, juega desde el primer día con Game Pass Ultimate o Game Pass para PC.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Estrenos -->
+  <section id="estrenos" class="fade-in">
+    <h2>🚀 Estrenos</h2>
+    <div class="two-columns">
+      <div class="card">
+        <img src="estreno1.jpg" alt="Estreno 1">
+        <h3>Little Nightmares 3</h3>
+        <p>Little Nightmares III es una perturbadora aventura atmosférica en la que los grandes amigos Low y Alone, que quieren huir de la Nada, colaborarán para resolver puzles y sobrevivir en un mundo de pesadilla, tanto en el cooperativo online para 2 jugadores como en el modo de un jugador con la I.A.</p>
+      </div>
+      <div class="card">
+        <img src="estreno2.jpg" alt="Estreno 2">
+        <h3>Hollow Knight: Silksong</h3>
+        <p>¡Descubre un vasto reino embrujado en Hollow Knight: Silksong! Explora, lucha y sobrevive mientras asciendes a la cima de un vasto reino gobernado por la seda y el canto.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recomendaciones -->
+  <section id="recomendaciones" class="fade-in">
+    <h2>🎯 Recomendaciones</h2>
+    <div class="two-columns">
+      <div class="card">
+        <img src="img/recom1.jpg" alt="Recomendación 1">
+        <h3>Juego Recomendado 1</h3>
+        <p>Motivos por los que es un must-play y plataforma disponible.</p>
+      </div>
+      <div class="card">
+        <img src="img/recom2.jpg" alt="Recomendación 2">
+        <h3>Juego Recomendado 2</h3>
+        <p>Sinopsis breve y experiencia de juego destacada.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Top Ten -->
+  <section id="topten" class="fade-in">
+    <h2>🏆 Top Ten</h2>
+    <div class="two-columns">
+      <div class="card">
+        <img src="img/top1.jpg" alt="Top 1 PS4">
+        <h3>Top 1 - PS4</h3>
+        <p>El juego más destacado del ranking de consolas PS4.</p>
+      </div>
+      <div class="card">
+        <img src="img/top2.jpg" alt="Top 2 Xbox">
+        <h3>Top 2 - Xbox</h3>
+        <p>Juego más jugado de la semana en Xbox.</p>
+      </div>
+      <div class="card">
+        <img src="img/top3.jpg" alt="Top 3 Switch">
+        <h3>Top 3 - Switch</h3>
+        <p>Juego popular por críticas y experiencia de juego.</p>
+      </div>
+      <div class="card">
+        <img src="img/top4.jpg" alt="Top 4 PC">
+        <h3>Top 4 - PC</h3>
+        <p>Recomendado por rendimiento y comunidad gamer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-glow"></div>
+    <p>© 2025 R-GAMER'S | Todos los derechos reservados</p>
+  </footer>
+
+  <!-- Script animaciones -->
+  <script>
+    function revealOnScroll() {
+      const elements = document.querySelectorAll('.fade-in');
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+          el.classList.add('visible');
+        } else {
+          el.classList.remove('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+
+</body>
+  </html>

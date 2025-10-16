@@ -1,3 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>R-GAMER'S</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0c0c0c;
+      color: white;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    /* Encabezado con banner de fondo */
+    .top-header {
+      text-align: center;
+      padding: 80px 20px;
+      background: url('banner.jpg') center/cover no-repeat;
+      position: relative;
+      color: white;
+      z-index: 2;
+    }
+
+    /* Capa de oscurecimiento sobre el fondo para mejorar el contraste */
+    .top-header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: 1;
+    }
+
+    .top-header h1,
+    .top-header p {
+      position: relative;
+      z-index: 2;
+    }
+
+    .top-header h1 {
+      font-size: 50px;
+      color: #00ff00;
+      margin: 0;
+      text-shadow: 0 0 15px #00ff00;
+    }
+
+    .top-header p {
+      font-size: 20px;
+      color: #fff;
+      margin-top: 10px;
+    }
+
+    /* Menú de navegación */
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #111;
+      padding: 15px 0;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    nav a {
+      color: #00ff00;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: rgba(0,255,0,0.2);
+    }
+
+    /* Secciones */
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #00ff00;
+      margin-bottom: 20px;
+    }
+
+    .two-columns {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 45%;
+      box-shadow: 0 0 15px rgba(0,255,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
       height: auto;
       display: block;
     }
@@ -113,6 +226,22 @@
       </div>
     </div>
   </section>
+  <!-- Estrenos -->
+  <section id="estrenos" class="fade-in">
+    <h2>🚀 Estrenos</h2>
+    <div class="two-columns">
+      <div class="card">
+        <img src="estreno1.jpg" alt="Estreno 1">
+        <h3>Little Nightmares 3</h3>
+        <p>Little Nightmares III es una perturbadora aventura atmosférica en la que los grandes amigos Low y Alone colaborarán para sobrevivir en un mundo de pesadilla.</p>
+      </div>
+      <div class="card">
+        <img src="estreno2.jpg" alt="Estreno 2">
+        <h3>Hollow Knight: Silksong</h3>
+        <p>¡Explora un vasto reino embrujado en Hollow Knight: Silksong! Desafíos, belleza y acción intensa te esperan.</p>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer>
@@ -138,4 +267,4 @@
   </script>
 
 </body>
-</html>
+                                          </html>

@@ -14,34 +14,45 @@
       overflow-x: hidden;
     }
 
-    /* Banner visual sin texto */
-    .banner {
-      background: url('banner.jpg') center/cover no-repeat;
-      height: 200px;
-      width: 100%;
-      position: relative;
-      z-index: 2;
-      box-shadow: 0 0 25px rgba(0, 255, 0, 0.3);
-    }
-
-    /* Encabezado principal */
+    /* Encabezado con banner de fondo */
     .top-header {
       text-align: center;
-      padding: 40px 0 0 0;
-      background: linear-gradient(180deg, rgba(0,255,0,0.1), transparent);
+      padding: 80px 20px;
+      background: url('banner.jpg') center/cover no-repeat;
+      position: relative;
+      color: white;
+      z-index: 2;
+    }
+
+    /* Capa de oscurecimiento sobre el fondo para mejorar el contraste */
+    .top-header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: 1;
+    }
+
+    .top-header h1,
+    .top-header p {
+      position: relative;
+      z-index: 2;
     }
 
     .top-header h1 {
       font-size: 50px;
       color: #00ff00;
       margin: 0;
+      text-shadow: 0 0 15px #00ff00;
     }
 
     .top-header p {
       font-size: 20px;
-      color: #ccc;
+      color: #fff;
       margin-top: 10px;
-      margin-bottom: 40px;
     }
 
     /* Menú de navegación */
@@ -165,14 +176,11 @@
 </head>
 <body>
 
-  <!-- Título principal -->
+  <!-- Encabezado principal con banner detrás -->
   <div class="top-header">
     <h1>R-GAMER'S</h1>
     <p>Tu mundo gamer en un solo lugar 🎮</p>
   </div>
-
-  <!-- Banner visual debajo del título -->
-  <div class="banner"></div>
 
   <!-- Menú -->
   <nav>
@@ -209,56 +217,12 @@
       <div class="card">
         <img src="estreno1.jpg" alt="Estreno 1">
         <h3>Little Nightmares 3</h3>
-        <p>Little Nightmares III es una perturbadora aventura atmosférica en la que los grandes amigos Low y Alone, que quieren huir de la Nada, colaborarán para resolver puzles y sobrevivir en un mundo de pesadilla, tanto en el cooperativo online para 2 jugadores como en el modo de un jugador con la I.A.</p>
+        <p>Little Nightmares III es una perturbadora aventura atmosférica en la que los grandes amigos Low y Alone colaborarán para sobrevivir en un mundo de pesadilla.</p>
       </div>
       <div class="card">
         <img src="estreno2.jpg" alt="Estreno 2">
         <h3>Hollow Knight: Silksong</h3>
-        <p>¡Descubre un vasto reino embrujado en Hollow Knight: Silksong! Explora, lucha y sobrevive mientras asciendes a la cima de un vasto reino gobernado por la seda y el canto.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Recomendaciones -->
-  <section id="recomendaciones" class="fade-in">
-    <h2>🎯 Recomendaciones</h2>
-    <div class="two-columns">
-      <div class="card">
-        <img src="img/recom1.jpg" alt="Recomendación 1">
-        <h3>Juego Recomendado 1</h3>
-        <p>Motivos por los que es un must-play y plataforma disponible.</p>
-      </div>
-      <div class="card">
-        <img src="img/recom2.jpg" alt="Recomendación 2">
-        <h3>Juego Recomendado 2</h3>
-        <p>Sinopsis breve y experiencia de juego destacada.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Top Ten -->
-  <section id="topten" class="fade-in">
-    <h2>🏆 Top Ten</h2>
-    <div class="two-columns">
-      <div class="card">
-        <img src="img/top1.jpg" alt="Top 1 PS4">
-        <h3>Top 1 - PS4</h3>
-        <p>El juego más destacado del ranking de consolas PS4.</p>
-      </div>
-      <div class="card">
-        <img src="img/top2.jpg" alt="Top 2 Xbox">
-        <h3>Top 2 - Xbox</h3>
-        <p>Juego más jugado de la semana en Xbox.</p>
-      </div>
-      <div class="card">
-        <img src="img/top3.jpg" alt="Top 3 Switch">
-        <h3>Top 3 - Switch</h3>
-        <p>Juego popular por críticas y experiencia de juego.</p>
-      </div>
-      <div class="card">
-        <img src="img/top4.jpg" alt="Top 4 PC">
-        <h3>Top 4 - PC</h3>
-        <p>Recomendado por rendimiento y comunidad gamer.</p>
+        <p>¡Explora un vasto reino embrujado en Hollow Knight: Silksong! Desafíos, belleza y acción intensa te esperan.</p>
       </div>
     </div>
   </section>

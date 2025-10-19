@@ -3,195 +3,200 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>R-GAMER'S</title>
+  <title>TALLER R-GAMER'S</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #0c0c0c;
-      color: white;
       margin: 0;
-      padding: 0;
-      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: #f2f2f2;
+      scroll-behavior: smooth;
     }
 
-    /* Encabezado con banner de fondo */
+    /* 🔹 Banner superior con imagen de fondo y contraste */
     .top-header {
+      position: relative;
       text-align: center;
       padding: 80px 20px;
       background: url('banner.jpg') center/cover no-repeat;
-      position: relative;
-      color: white;
-      z-index: 2;
+      border-bottom: 2px solid #0f0;
     }
-
-    /* Capa de oscurecimiento sobre el fondo para mejorar el contraste */
     .top-header::before {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.55);
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
       z-index: 1;
     }
-
-    .top-header h1,
-    .top-header p {
+    .top-header h1, .top-header p {
       position: relative;
       z-index: 2;
     }
-
     .top-header h1 {
-      font-size: 50px;
-      color: #00ff00;
+      font-size: 3.5rem;
+      color: #0f0;
       margin: 0;
-      text-shadow: 0 0 15px #00ff00;
+      text-shadow: 0 0 20px #0f0, 0 0 40px #0f0;
     }
-
     .top-header p {
-      font-size: 20px;
-      color: #fff;
-      margin-top: 10px;
+      font-size: 1.5rem;
+      margin: 10px 0;
     }
 
-    /* Menú de navegación */
-    nav {
+    /* 🔹 Cintillo animado con logos de consolas */
+    .logo-slider {
+      position: relative;
+      overflow: hidden;
+      background: #111;
+      border-top: 2px solid #0f0;
+      border-bottom: 2px solid #0f0;
+      padding: 10px 0;
+    }
+    .logo-track {
       display: flex;
-      justify-content: center;
-      background-color: #111;
-      padding: 15px 0;
-      flex-wrap: wrap;
-      gap: 10px;
+      gap: 60px;
+      animation: slide 15s linear infinite;
+      width: max-content;
+    }
+    .logo-track img {
+      height: 50px;
+      filter: drop-shadow(0 0 5px #0f0);
+    }
+    @keyframes slide {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
     }
 
+    nav {
+      text-align: center;
+      padding: 15px;
+      background: #111;
+      border-bottom: 2px solid #0f0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
     nav a {
-      color: #00ff00;
+      margin: 0 15px;
+      color: #f2f2f2;
       text-decoration: none;
       font-weight: bold;
-      padding: 10px 20px;
-      border-radius: 8px;
-      transition: background 0.3s;
+      transition: color 0.3s;
     }
-
     nav a:hover {
-      background-color: rgba(0,255,0,0.2);
+      color: #0f0;
     }
 
-    /* Secciones */
-    section {
-      padding: 40px 20px;
-      text-align: center;
-    }
+    section { padding: 50px 20px; text-align: center; }
 
     h2 {
-      color: #00ff00;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #0f0;
+      text-shadow: 0 0 10px #0f0;
     }
 
     .two-columns {
       display: flex;
-      justify-content: center;
-      gap: 20px;
       flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
     }
 
     .card {
-      background: #1a1a1a;
+      background: #111;
+      border: 2px solid #0f0;
       border-radius: 10px;
-      overflow: hidden;
-      width: 45%;
-      box-shadow: 0 0 15px rgba(0,255,0,0.2);
-      transition: transform 0.3s;
+      padding: 15px;
+      width: 300px;
+      box-shadow: 0 0 15px #0f0;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: left;
     }
-
     .card:hover {
-      transform: scale(1.03);
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px #0f0;
     }
-
     .card img {
       width: 100%;
-      height: auto;
-      display: block;
+      border-radius: 10px;
+      margin-bottom: 10px;
     }
+    .card h3 { color: #0f0; }
+    .card p { color: #ccc; }
 
-    .card h3 {
-      color: #00ff00;
-      font-size: 20px;
-      margin: 15px 10px 10px;
-    }
-
-    .card p {
-      color: #ccc;
-      font-size: 16px;
-      margin: 0 10px 20px;
-    }
-
-    /* Efectos de aparición */
+    /* Animaciones de aparición */
     .fade-in {
       opacity: 0;
       transform: translateY(30px);
-      transition: opacity 1s ease-out, transform 1s ease-out;
+      transition: opacity 0.8s ease, transform 0.8s ease;
     }
-
     .fade-in.visible {
       opacity: 1;
       transform: translateY(0);
     }
 
-    /* Pie de página */
     footer {
-      text-align: center;
       position: relative;
-      margin-top: 40px;
-      background: #0c0c0c;
-      padding: 20px 0;
+      background: #111;
+      text-align: center;
+      padding: 40px 20px 20px;
+      border-top: 2px solid #0f0;
+      color: #888;
+      overflow: hidden;
     }
-
-    .footer-glow {
+    footer .footer-glow {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120%;
       height: 150px;
       background: radial-gradient(ellipse at bottom, rgba(0,255,0,0.4), transparent 70%);
       z-index: 1;
     }
-
-    footer p {
-      position: relative;
-      z-index: 2;
-    }
+    footer p { position: relative; z-index: 2; }
 
     @media (max-width: 650px) {
-      .two-columns {
-        flex-direction: column;
-        align-items: center;
-      }
-      .card {
-        width: 90%;
-      }
+      .two-columns { flex-direction: column; align-items: center; }
+      .card { width: 90%; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Encabezado principal con banner detrás -->
+  <!-- Banner superior -->
   <div class="top-header">
     <h1>R-GAMER'S</h1>
     <p>Tu mundo gamer en un solo lugar 🎮</p>
+  </div>
+
+  <!-- Cintillo de logos -->
+  <div class="logo-slider">
+    <div class="logo-track">
+      <img src="logos/playstation.png" alt="PlayStation">
+      <img src="logos/xbox.png" alt="Xbox">
+      <img src="logos/nintendo.png" alt="Nintendo">
+      <img src="logos/pc.png" alt="PC">
+      <img src="logos/sega.png" alt="Sega">
+      <!-- Repetidos para ciclo continuo -->
+      <img src="logos/playstation.png" alt="PlayStation">
+      <img src="logos/xbox.png" alt="Xbox">
+      <img src="logos/nintendo.png" alt="Nintendo">
+    </div>
   </div>
 
   <!-- Menú -->
   <nav>
     <a href="#novedades">Novedades</a>
     <a href="#estrenos">Estrenos</a>
-    <a href="#recomendaciones">Recomendaciones</a> 
-    <a href="#topten">Top Ten</a> 
-    <a href="catalogo.html">Catálogo</a>                                         
+    <a href="#recomendaciones">Recomendaciones</a>
+    <a href="#topten">Top Ten</a>
+    <a href="catalogo.html">Catálogo</a>
     <a href="servicios.html">Servicios</a>
     <a href="contacto.html">Contacto</a>
-  </nav>
+
+    </nav>
 
   <!-- Novedades -->
   <section id="novedades" class="fade-in">
@@ -205,7 +210,7 @@
       <div class="card">
         <img src="noticia2.jpg" alt="Noticia 2">
         <h3>Call of Duty®: Black Ops 7 ha sido confirmado.</h3>
-        <p>Call of Duty: Black Ops 7 está programado para su lanzamiento en Xbox Series X|S, Xbox One, PlayStation® 5, PlayStation® 4 y en PC a través de Xbox PC, Battle.net y Steam. Además, juega desde el primer día con Game Pass Ultimate o Game Pass para PC.</p>
+        <p>Call of Duty: Black Ops 7 está programado para su lanzamiento en Xbox Series X|S, Xbox One, PlayStation® 5, PlayStation® 4 y en PC a través de Xbox PC, Battle.net y Steam. Además, juega desde el primer día con Game Pass Ultimate o Game Pass para PC..</p>
       </div>
     </div>
   </section>
@@ -217,28 +222,56 @@
       <div class="card">
         <img src="estreno1.jpg" alt="Estreno 1">
         <h3>Little Nightmares 3</h3>
-        <p>Little Nightmares III es una perturbadora aventura atmosférica en la que los grandes amigos Low y Alone colaborarán para sobrevivir en un mundo de pesadilla.</p>
+        <p>Little Nightmares III es una perturbadora aventura atmosférica en la que los grandes amigos Low y Alone, que quieren huir de la Nada, colaborarán para resolver puzles y sobrevivir en un mundo de pesadilla, tanto en el cooperativo online para 2 jugadores como en el modo de un jugador con la I.A.</p>
       </div>
       <div class="card">
         <img src="estreno2.jpg" alt="Estreno 2">
         <h3>Hollow Knight: Silksong</h3>
-        <p>¡Explora un vasto reino embrujado en Hollow Knight: Silksong! Desafíos, belleza y acción intensa te esperan.</p>
+        <p>¡Descubre un vasto reino embrujado en Hollow Knight: Silksong! Explora, lucha y sobrevive mientras asciendes a la cima de un vasto reino gobernado por la seda y el canto.</p>
       </div>
     </div>
   </section>
-  <!-- Estrenos -->
-  <section id="estrenos" class="fade-in">
-    <h2>🚀 Estrenos</h2>
+
+  <!-- Recomendaciones -->
+  <section id="recomendaciones" class="fade-in">
+    <h2>🎯 Recomendaciones</h2>
     <div class="two-columns">
       <div class="card">
-        <img src="estreno1.jpg" alt="Estreno 1">
-        <h3>Little Nightmares 3</h3>
-        <p>Little Nightmares III es una perturbadora aventura atmosférica en la que los grandes amigos Low y Alone colaborarán para sobrevivir en un mundo de pesadilla.</p>
+        <img src="img/recom1.jpg" alt="Recomendación 1">
+        <h3>Juego Recomendado 1</h3>
+        <p>Motivos por los que es un must-play y plataforma disponible.</p>
       </div>
       <div class="card">
-        <img src="estreno2.jpg" alt="Estreno 2">
-        <h3>Hollow Knight: Silksong</h3>
-        <p>¡Explora un vasto reino embrujado en Hollow Knight: Silksong! Desafíos, belleza y acción intensa te esperan.</p>
+        <img src="img/recom2.jpg" alt="Recomendación 2">
+        <h3>Juego Recomendado 2</h3>
+        <p>Sinopsis breve y experiencia de juego destacada.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Top Ten -->
+  <section id="topten" class="fade-in">
+    <h2>🏆 Top Ten</h2>
+    <div class="two-columns">
+      <div class="card">
+        <img src="img/top1.jpg" alt="Top 1 PS4">
+        <h3>Top 1 - PS4</h3>
+        <p>El juego más destacado del ranking de consolas PS4.</p>
+      </div>
+      <div class="card">
+        <img src="img/top2.jpg" alt="Top 2 Xbox">
+        <h3>Top 2 - Xbox</h3>
+        <p>Juego más jugado de la semana en Xbox.</p>
+      </div>
+      <div class="card">
+        <img src="img/top3.jpg" alt="Top 3 Switch">
+        <h3>Top 3 - Switch</h3>
+        <p>Juego popular por críticas y experiencia de juego.</p>
+      </div>
+      <div class="card">
+        <img src="img/top4.jpg" alt="Top 4 PC">
+        <h3>Top 4 - PC</h3>
+        <p>Recomendado por rendimiento y comunidad gamer.</p>
       </div>
     </div>
   </section>
@@ -267,4 +300,4 @@
   </script>
 
 </body>
-                                          </html>
+  </html>

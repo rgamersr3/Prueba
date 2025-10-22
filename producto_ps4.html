@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consola PS4 - R-GAMERS</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #000; color: #0f0; margin: 0; padding: 0; }
+        header { text-align: center; padding: 20px; background-color: #111; }
+        .producto-container { display: flex; flex-direction: column; align-items: center; padding: 20px; }
+        .carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px; }
+        .carousel img { width: 300px; height: 200px; object-fit: cover; border-radius: 10px; scroll-snap-align: start; }
+        .info-producto { max-width: 600px; text-align: left; margin-top: 20px; }
+        .boton-comprar { margin-top: 20px; padding: 10px 20px; background-color: #0f0; color: #000; border: none; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Consola PS4 Usada - 1TB</h1>
+    </header>
+    <div class="producto-container">
+        <div class="carousel">
+            <img src="img/productos/ps4_1.jpg" alt="PS4 frontal">
+            <img src="img/productos/ps4_2.jpg" alt="PS4 lateral">
+            <img src="img/productos/ps4_3.jpg" alt="PS4 con controles">
+        </div>
+        <div class="info-producto">
+            <p><strong>Estado:</strong> Usada</p>
+            <p><strong>Capacidad:</strong> 1TB</p>
+            <p><strong>Incluye:</strong> 2 controles, todos sus cables</p>
+            <p><strong>Color:</strong> Negro</p>
+            <button class="boton-comprar" onclick="window.location.href='https://wa.me/1234567890?text=Hola,%20me%20interesa%20el%20producto%20Consola%20PS4%20Usada%201TB';">Comprar por WhatsApp</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda R-GAMERS</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #000; color: #0f0; margin: 0; padding: 0; }
+        header { text-align: center; padding: 20px; background-color: #111; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0; margin: 0; }
+        nav li { margin: 0 15px; }
+        nav a { color: #0f0; text-decoration: none; font-weight: bold; }
+        .productos { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 40px; }
+        .producto { background-color: #111; border: 1px solid #0f0; border-radius: 10px; width: 250px; padding: 15px; text-align: center; }
+        .producto img { width: 100%; border-radius: 10px; }
+        .colores { margin: 10px 0; display: flex; justify-content: center; gap: 5px; }
+        .color { width: 20px; height: 20px; border-radius: 50%; border: 1px solid #0f0; }
+        button { padding: 8px 12px; margin-top: 10px; border: none; border-radius: 5px; background-color: #0f0; color: #000; cursor: pointer; }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Tienda R-GAMERS</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogos.html">Catálogos</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
+            <li><a href="tienda.html">Tienda</a></li>
+        </ul>
+    </nav>
+</header>
+<section class="productos">
+    <!-- Consola PS4 usada -->
+    <div class="producto">
+        <a href="producto_ps4.html"><img src="img/productos/ps4.jpg" alt="Consola PS4"></a>
+        <h3>Consola PS4 Usada</h3>
+        <p>1TB de capacidad, 2 controles y todos sus cables</p>
+        <div class="colores">
+            <div class="color" style="background-color: black;"></div>
+        </div>
+        <button onclick="window.location.href='https://wa.me/1234567890?text=Me%20interesa%20la%20Consola%20PS4'">Comprar</button>
+    </div>
+    <!-- Control PS4 nuevo -->
+    <div class="producto">
+        <a href="producto_control_ps4.html"><img src="img/productos/control_ps4.jpg" alt="Control PS4"></a>
+        <h3>Control PS4 Nuevo</h3>
+        <p>Colores disponibles:</p>
+        <div class="colores">
+            <div class="color" style="background-color: white;"></div>
+            <div class="color" style="background-color: black;"></div>
+            <div class="color" style="background-color: red;"></div>
+            <div class="color" style="background-color: blue;"></div>
+        </div>
+        <button onclick="window.location.href='https://wa.me/1234567890?text=Me%20interesa%20el%20Control%20PS4'">Comprar</button>
+    </div>
+    <!-- Xbox 360 usada -->
+    <div class="producto">
+        <a href="producto_xbox360.html"><img src="img/productos/xbox360.jpg" alt="Xbox 360"></a>
+        <h3>Xbox 360 Usada</h3>
+        <p>500GB, 2 controles y todos sus cables</p>
+        <div class="colores">
+            <div class="color" style="background-color: black;"></div>
+        </div>
+        <button onclick="window.location.href='https://wa.me/1234567890?text=Me%20interesa%20la%20Xbox%20360'">Comprar</button>
+    </div>
+    <!-- Control Xbox 360 usado -->
+    <div class="producto">
+        <a href="producto_control_xbox360.html"><img src="img/productos/control_xbox360.jpg" alt="Control Xbox 360"></a>
+        <h3>Control Xbox 360 Usado</h3>
+        <p>Colores disponibles:</p>
+        <div class="colores">
+            <div class="color" style="background-color: white;"></div>
+            <div class="color" style="background-color: black;"></div>
+        </div>
+        <button onclick="window.location.href='https://wa.me/1234567890?text=Me%20interesa%20el%20Control%20Xbox%20360'">Comprar</button>
+    </div>
+</section>
+<footer style="text-align:center; padding:20px; background-color:#111;">
+    <p>&copy; 2025 R-GAMERS. Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>

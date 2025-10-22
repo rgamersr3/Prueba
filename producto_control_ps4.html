@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control PS4 - R-GAMERS</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #000; color: #0f0; margin: 0; padding: 0; }
+        header { text-align: center; padding: 20px; background-color: #111; }
+        .carrusel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px; padding: 20px; }
+        .carrusel img { width: 200px; height: 200px; object-fit: cover; scroll-snap-align: start; border-radius: 10px; }
+        .producto-info { padding: 20px; }
+        .comprar-btn { background-color: #0f0; color: #000; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Control PS4</h1>
+    </header>
+    <section class="carrusel">
+        <img src="img/productos/control_ps4_negro.jpg" alt="Control PS4 negro">
+        <img src="img/productos/control_ps4_blanco.jpg" alt="Control PS4 blanco">
+        <img src="img/productos/control_ps4_rojo.jpg" alt="Control PS4 rojo">
+        <img src="img/productos/control_ps4_azul.jpg" alt="Control PS4 azul">
+    </section>
+    <section class="producto-info">
+        <p>Estado: Nuevo</p>
+        <p>Colores disponibles: Negro, Blanco, Rojo, Azul</p>
+        <p>Precio: $50</p>
+        <button class="comprar-btn" onclick="window.location.href='https://wa.me/1234567890?text=Hola%2C%20me%20interesa%20el%20producto%20Control%20PS4'">Comprar por WhatsApp</button>
+    </section>
+</body>
+</html>
